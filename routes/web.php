@@ -26,8 +26,6 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [IndexController::class, 'loginPage'])->name('login-page');
 
-Route::get('/', [IndexController::class, 'loginPage'])->name('login-page');
-
 Route::get('/admin/login', [IndexController::class, 'loginPage'])->name('login-admin');
 
 Route::post('admin-login', [AccessController::class, 'adminLogin'])->name('admin-login');

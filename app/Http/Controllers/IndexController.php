@@ -13,9 +13,6 @@ class IndexController extends Controller
 
     public function loginPage()
     {
-        if (auth()->check()) {
-            return redirect()->route('dashboard');
-        }
-    	return view('admin_login');
+        return "Hello, w3 engineers.";
     }
 }
