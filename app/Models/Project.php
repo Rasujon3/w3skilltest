@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Project extends Model
+{
+    protected $fillable = [
+        'name',
+        'owner_email',
+        'release_date',
+    ];
+
+    // Relationship
+    public function checks(): HasMany
+    {
+        return $this->hasMany(DeploymentCheck::class);
+    }
+}
